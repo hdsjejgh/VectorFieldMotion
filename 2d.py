@@ -16,7 +16,7 @@ dot_rad = 0.1*coord_scalar
 
 #Tick lifespan of each dot. Pygame runs at 120 tps
 tick = 0
-dot_lifetime_range = (10,600)
+dot_lifetime_range = (5,1000)
 LIFE = True #Whether or not dots should have a lifespan
 #Whether or not to kill dots that exit the view
 CLIP = True
@@ -26,7 +26,7 @@ count = len(dots)
 
 #How much each dot is changed by its flow vector
 #Higher value = faster, less accurate movements
-movement_scalar = 0.001
+movement_scalar = 0.01
 
 #Pygame initialization
 width = (xMax-xMin)*coord_scalar
@@ -38,13 +38,13 @@ pygame.font.init()
 font_size = 20
 font = pygame.font.SysFont('Consolas', font_size)
 
-x_eq = "x**2 - y**2" #Change this equation to change the x component
+x_eq = "-(x*y)" #Change this equation to change the x component
 def x_component(point): #X component of the vector field
     x=point[0]
     y=point[1]
     return eval(x_eq)
 
-y_eq = "x*y" #Change this equation to change the y component
+y_eq = "x" #Change this equation to change the y component
 def y_component(point): #Y component of the vector field
     x = point[0]
     y = point[1]
