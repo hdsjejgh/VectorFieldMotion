@@ -16,8 +16,5 @@ This is a tool to visualize 2d and 3d vector fields. It shows how particles thro
 #### Vector field of <-y, x, 0> ####
 ![](media/7293742.gif)
 
-#### Vector field of <x, y, x*y> ####
-![](media/0294724.gif)
-
 #### Vector field of <-y/(x**2 + y**2 + z**2 + 0.01), x/(x**2 + y**2 + z**2 + 0.01), z/(x**2 + y**2 + z**2 + 0.01)> ####
 ![](media/2255426.gif)
